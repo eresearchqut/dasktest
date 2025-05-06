@@ -1,4 +1,4 @@
-# Dask on aqua
+# Dask on Aqua
 
 Using Dask in an interactive Jupyter notebook on QUT's Aqua, to run distributed jobs on a PBS cluster.
 
@@ -65,7 +65,7 @@ Run the notebook from the beginning to do the following:
 1. Create a Dask PBS cluster of 20, 20-min jobs with 4 CPUs and 1GB RAM
 2. Perform work on the cluster interactively by running a Python function map-reduce style on a subset of data
 
-Once the cluster and client have started, open another terminal instance and forward the port to see the work being performed, and the resource utilisation of each job
+Once the cluster and client have started, open another terminal instance and forward the port of the dask dashboard to see the work being performed, and the resource utilisation of each job
 
 ```
 # replace cpu1n001 with the name of the host retrieved earlier
