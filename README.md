@@ -4,7 +4,7 @@ Using Dask in an interactive Jupyter notebook on QUT's Aqua, to run distributed 
 
 See the [notebook](main.ipynb)
 
-![Screenshot of the dask dashboard](assets/dashboard.png)
+![Screenshot of the Dask dashboard](assets/dashboard.png)
 
 ![Screenshot of the notebook](assets/notebook.png)
 
@@ -34,14 +34,14 @@ Get the name of the host running the interactive job (eg. `cpu1n001`):
 echo $HOSTNAME
 ```
 
-Change in to the directory containing this repository, and start the jupyter lab server:
+Change in to the directory containing this repository, and start the Jupyter lab server:
 
 ```bash
 # cd ~/src/dasktest
 uv run jupyter lab --ip 0.0.0.0
 ```
 
-In another terminal, port-forward the connection so that you can access the jupyter lab instance:
+In another terminal, port-forward the connection so that you can access the Jupyter Lab instance:
 
 ```bash
 # replace cpu1n001 with the name of the host retrieved earlier
@@ -56,7 +56,7 @@ Wait for the server to start, then click the link to access it in your browser:
 ...
 ```
 
-Open the `main.ipynb` notebook in jupyter lab
+Open the `main.ipynb` notebook in Jupyter Lab
 
 ### Dask cluster
 
@@ -65,11 +65,11 @@ Run the notebook from the beginning to do the following:
 1. Create a Dask PBS cluster of 20, 20-min jobs with 4 CPUs and 1GB RAM
 2. Perform work on the cluster interactively by running a Python function map-reduce style on a subset of data
 
-Once the cluster and client have started, open another terminal instance and forward the port of the dask dashboard to see the work being performed, and the resource utilisation of each job
+Once the cluster and client have started, open another terminal instance and forward the port of the Dask dashboard to see the work being performed, and the resource utilisation of each job
 
 ```
 # replace cpu1n001 with the name of the host retrieved earlier
-# replace 8787 with the port opened by the dask cluster client
+# replace 8787 with the port opened by the Dask cluster client
 ssh -L 8787:cpu1n001:8787 aqua
 ```
 
